@@ -1,0 +1,173 @@
+/* 
+cores
+cinza azul ced8e1
+azul escuro 102b3e
+roza f1545f
+*/
+
+/* styleGuide */
+* {
+    color: #102b3e;
+}
+h1 {
+    color: #FFFF;
+    white-space: nowrap;
+}
+h4 {
+    color: #f1545f;
+    font-weight: 700;    
+}
+h3 {
+    color: #f1545f;
+    font-weight: 700;    
+}
+* {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    text-transform: capitalize;
+}
+body {
+    color: #102b3e;
+    background-color: #ffffff;
+    /* margin: 0em 30em; */
+    /* border: 4px solid #000; */
+}
+/* styleGuide */
+
+/* header */
+header {
+    background-color: #102b3e;
+    padding: 1.5rem;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+ul li {
+    display: inline;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+ul li a {
+    color: #FFFF;
+    text-decoration: none;
+}
+ul li a:hover {
+    color: #f1545f;
+    font-weight: bold;
+    transition: 0.2s;
+}
+/* header */
+
+/* content */
+.list-title {
+    padding-top: 1rem;
+}
+aside {
+    padding-top: 1rem;
+    /* display: none; */
+}
+.list-item-products a {
+    text-decoration: none !important;
+    white-space: nowrap;
+}
+.products-name:hover {
+    color: #f1545f;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.content {
+    display: flex;
+}
+.list-products {
+    margin: 4rem;
+}
+.list-item-products a p {
+    margin-top: 0.9rem;
+}
+
+/* content */
+
+/* products box  */
+main {
+    padding: 4rem;
+}
+img {
+    width: 14rem;
+    border-radius: 1rem;
+}
+.item-area {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 90%; */
+}
+.product-color {
+    font-weight: bold;
+}
+span {
+    font-weight: 400;
+}
+.box-products {
+    margin: 1em 1em ;
+    text-align: center;
+    width: 16em;
+    font-weight: 400;
+    cursor: pointer;
+}
+.description-products {
+    padding: 5px;
+}
+/* products box  */
+
+
+hr {
+    border: none;
+    background-color: #f1545f;
+    height: 5px;
+}
+
+.future-release {
+    display: flex;
+    align-items: center;
+}
+
+.section-release {
+    padding: 4rem;
+}
+
+
+/* cart */
+.cart {
+    position: absolute;
+    top: 60%;
+    right: 40%;
+    width: 50rem;
+    padding: 4rem;
+    box-shadow: 0px 0px 80px 0px #8e8e8e;
+}
+/* cart */
+
+
+
+
+
+@media(max-width: 768px){
+    /* header */
+        
+    /* header */
+
+    /* content */
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .list-area {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .list-item-products {
+        padding: 0.5rem;
+    }
+    /* content */
+}
