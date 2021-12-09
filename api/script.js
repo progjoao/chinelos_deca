@@ -6,6 +6,7 @@ productJson.map( (item, index) => {
     a('.item-area').append(listProduct)
 
 
+    listProduct.setAttribute('data-key', index);
     listProduct.querySelector('.product-img').src = item.img;
     listProduct.querySelector('.product-name').innerHTML = item.name;
     listProduct.querySelector('.description-products').innerHTML = item.description;
@@ -18,12 +19,22 @@ productJson.map( (item, index) => {
 
 });
 
-releaseJson.slice(0, 3).map( (item, index) => {
-    let listRelease = a('.future-release').cloneNode(true)
+releaseJson.map( (item, index) => {
+    let listRelease = a('.future-release').cloneNode(true);
     a('.area-release').append(listRelease);
 
+    listRelease.setAttribute('data-key', index);
     listRelease.querySelector('.img-release').src = item.img;
     listRelease.querySelector('.title-release').innerHTML = item.name
     listRelease.querySelector('.description-release').innerHTML = item.description
     
+    a('.img-release').style.display = "block"
 });
+
+factoryJson.map( (item) => {
+    let boxTrack = a('.box-track').cloneNode(true);
+    a('.track-area').append(boxTrack);
+
+    boxTrack.querySelector('.img-track').src = item.img
+    boxTrack.style.display = "block"
+})
