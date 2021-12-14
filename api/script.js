@@ -1,7 +1,8 @@
 const a = (el) => document.querySelector(el);
 const b = (el) => document.querySelectorAll(el);
 
-
+let modalQt = 5 
+let modalKey = 0
 
 productJson.map( (item, index) => {
     let listProduct = a('.box-products').cloneNode(true);
@@ -17,21 +18,23 @@ productJson.map( (item, index) => {
     a('.list-area').append(listItem);
     listItem.querySelector('.products-name').innerHTML = item.name
 
+
     listProduct.querySelector('a').addEventListener('click', (e) => {
         e.preventDefault();
         let key = e.target.closest('.box-products').getAttribute('data-key');
+        modalKey = key;
 
         a('.img-modal').src = productJson[key].img
         a('.title-modal').innerHTML = productJson[key].name
         a('.modal-price h4').innerHTML = productJson[key].price
         a('.description-modal').innerHTML = productJson[key].description
-        a('.content-sizes.selected').classList.remove('selected')
+        // a('.content-sizes.selected').classList.remove('selected')
         b('.content-sizes').forEach( (size, sizeIndex) => {
             
             size.innerHTML = productJson[key].number[sizeIndex]
         });
 
-
+        a('.input').innerHTML = modalQt;
 
 
         a('.modal-hidden').style.opacity = 0;
@@ -40,11 +43,8 @@ productJson.map( (item, index) => {
             a('.modal-hidden').style.opacity = 1;
         }, 100);
 
-
     });
 
-    let mainCart = a('.main-cart');
-    mainCart.querySelector('.price-item').innerHTML = item.price.toFixed(2)
     
 });
 
@@ -68,6 +68,24 @@ factoryJson.map( (item) => {
     boxTrack.style.display = "block"
 })
 
+
+function closeModal(e) {
+    e.preventDefault()
+
+    a('.modal-hidden').style.opacity = 0;
+    setTimeout( () => {
+        a('.modal-hidden').style.display = 'none';
+    }, 300)
+}
+
+let cancelModal =  a('.cancel');
+cancelModal.addEventListener('click', closeModal)
+
+a('.add-cart').addEventListener('click', (e) => {
+    e.preventDefault()
+    
+    
+});
 
 let btnAdd = a('.add');
 btnAdd.addEventListener('click', add);

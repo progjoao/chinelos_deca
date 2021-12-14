@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="./assets/scss/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
@@ -27,20 +27,20 @@
             </ul>
         </nav>
     </header>
+    
     <main>
         <div class="content">
             <div class="list-products">
                 <h2>cores</h2>
                 <div class="list-area"></div>
             </div>
-            <aside>
+            <div class="content-lateral">
                 <div class="list-item-products">
                     <a href=""><p class="products-name"></p></a>
                 </div>
-            </aside>
-           
+            </div>
             <div class="produc">
-                <h2 id="produtos">produtos</h2>
+                <h2 id="produtos">Chinelos</h2>
                 <div class="item-area"></div>
             </div>
         </div>
@@ -53,7 +53,7 @@
         </div>
         <hr>
         <div class="section-release">
-            <h2 id="lancamentos">futuro lançamentos</h2>
+            <h2 id="releases">futuro lançamentos</h2>
             <div class="area-release"></div>
             <div class="future-release">
                 <img class="img-release" src="" alt="">
@@ -70,6 +70,7 @@
             </div>
         </div>
     </main>
+
     <footer>
         <ul>
             <div class="social-content">
@@ -89,10 +90,6 @@
             </div>
         </ul>
     </footer>
-
-
-
-
 
 
 
@@ -122,66 +119,61 @@
             </div>
         </div>
     </div>
-    
 
-
-
-
-    
-
-    <div class="cart">
-        <div class="content-cart">
-            <div class="shopping-cart">
-                <div class="cart-titles">
-                    <h2>shopping cart</h2>
-                    <h3>3 items</h3>
+    <div class="hidden-cart show">
+        <div class="cart">
+            <div class="content-cart">
+                <div class="shopping-cart">
+                    <div class="cart-titles">
+                        <h2>shopping cart</h2>
+                        <h3>1 item</h3>
+                    </div>
                 </div>
+                <hr>
+                <div class="details-cart">
+                    <p>Detalhes do produto</p>
+                    <p>Tamanho</p>
+                    <p>quantidade</p>
+                    <p>preço</p>
+                    <p>total</p>
+                </div>
+                <main class="general-cart">
+                    <div class="main-cart">
+                        <div class="details-product">
+                            <img class="img-cart" src="" alt="">
+                            <div class="">
+                                <p class="title-products"><span class="product-name"></span></p>
+                                <p class="product-color"><span class="product-name"></span></p>
+                                <p class="description-products"></p>
+                            </div>
+                        </div>
+                        <div class="size">
+                            <div class="small">
+                                <small class="size-item">--</small>
+                            </div>
+                        </div>
+                        <div class="quantity">
+                            <div class="select-quantity">
+                                <p class="remove">-</p>
+                                <input class="input" value="0" type="tel" name="" id="">
+                                <p class="add">+</p>
+                            </div>
+                        </div>
+                        <div class="price">
+                            <div class="small">
+                                <small class="price-item">--</small>
+                            </div>
+                        </div>
+                        <div class="small">
+                            <small class="total-order">--</small>
+                        </div>
+                    </div>
+                </main>
             </div>
-            <hr>
-            <div class="details-cart">
-                <p>Detalhes do produto</p>
-                <p>Tamanho</p>
-                <p>quantidade</p>
-                <p>preço</p>
-                <p>total</p>
-            </div>
-            <main class="main-cart">
-                <div class="details-product">
-                    <img class="produto-teste" src="./assets/images/produtos/amarelo.png" alt="">
-                    <div class="">
-                        <p class="title-products"><span class="product-name"></span></p>
-                        <p class="product-color"><span class="product-name"></span></p>
-                        <p class="description-products"></p>
-                    </div>
+            <div class="order-summary">
+                <div>
+                    <h1 class="order--summary">Order Summary</h1>
                 </div>
-                <div class="size">
-                    <div class="small">
-                        <small class="size-item">--</small>
-                    </div>
-                </div>
-                <div class="quantity">
-                    <div class="select-quantity">
-                        <p class="remove">-</p>
-                        <input class="input" value="0" type="tel" name="" id="">
-                        <p class="add">+</p>
-                    </div>
-                </div>
-                <div class="price">
-                    <div class="small">
-                        <small class="price-item">--</small>
-                    </div>
-                </div>
-                <div class="">
-                    
-                    <div class="small">
-                        <small class="total-order">--</small>
-                    </div>
-                </div> 
-            </main>
-        </div>
-        <div class="order-summary">
-            <div>
-                <h1 class="order--summary">Order Summary</h1>
             </div>
         </div>
     </div>
