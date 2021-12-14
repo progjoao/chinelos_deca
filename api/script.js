@@ -1,6 +1,8 @@
 const a = (el) => document.querySelector(el);
 const b = (el) => document.querySelectorAll(el);
 
+
+
 productJson.map( (item, index) => {
     let listProduct = a('.box-products').cloneNode(true);
     a('.item-area').append(listProduct)
@@ -11,12 +13,39 @@ productJson.map( (item, index) => {
     listProduct.querySelector('.product-name').innerHTML = item.name;
     listProduct.querySelector('.description-products').innerHTML = item.description;
 
-
     let listItem = a('.list-item-products').cloneNode(true);
     a('.list-area').append(listItem);
-
     listItem.querySelector('.products-name').innerHTML = item.name
 
+    listProduct.querySelector('a').addEventListener('click', (e) => {
+        e.preventDefault();
+        let key = e.target.closest('.box-products').getAttribute('data-key');
+
+        a('.img-modal').src = productJson[key].img
+        a('.title-modal').innerHTML = productJson[key].name
+        a('.modal-price h4').innerHTML = productJson[key].price
+        a('.description-modal').innerHTML = productJson[key].description
+        a('.content-sizes.selected').classList.remove('selected')
+        b('.content-sizes').forEach( (size, sizeIndex) => {
+            
+            size.innerHTML = productJson[key].number[sizeIndex]
+        });
+
+
+
+
+        a('.modal-hidden').style.opacity = 0;
+        a('.modal-hidden').style.display = 'flex';
+        setTimeout( () => {
+            a('.modal-hidden').style.opacity = 1;
+        }, 100);
+
+
+    });
+
+    let mainCart = a('.main-cart');
+    mainCart.querySelector('.price-item').innerHTML = item.price.toFixed(2)
+    
 });
 
 releaseJson.map( (item, index) => {
@@ -38,3 +67,27 @@ factoryJson.map( (item) => {
     boxTrack.querySelector('.img-track').src = item.img
     boxTrack.style.display = "block"
 })
+
+
+let btnAdd = a('.add');
+btnAdd.addEventListener('click', add);
+function add () {
+    let input = a('.input');
+    input.value++;
+
+    if(input.value == 5) {
+        alert('Quantidades acima desse valor, a data de entrega poderá levar até 15 dias uteis')
+    }else if (input.value == 10) {
+        alert('Não trabalhamos com quantidades acima desse valor')
+    }
+}
+
+let btnRemove = a('.remove');
+btnRemove.addEventListener('click', remove)
+function remove () {
+    let input = a('.input');
+    
+    if(input.value > 0) {
+        input.value--;
+    }
+}

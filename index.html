@@ -14,7 +14,7 @@
     <title>5 chinelos</title>
 </head>
 <body>
-    <!-- <header>
+    <header>
         <nav>
             <ul>
                 <h1>5 chinelos</h1>
@@ -38,15 +38,18 @@
                     <a href=""><p class="products-name"></p></a>
                 </div>
             </aside>
+           
             <div class="produc">
                 <h2 id="produtos">produtos</h2>
                 <div class="item-area"></div>
             </div>
         </div>
         <div class="box-products">
-            <img class="product-img" src="">
-            <p class="product-color"><span class="product-name"></span></p>
-            <p class="description-products"></p>
+            <a href="">
+                <img class="product-img" src="">
+                <p class="product-color"><span class="product-name"></span></p>
+                <p class="description-products"></p>
+            </a>
         </div>
         <hr>
         <div class="section-release">
@@ -70,9 +73,13 @@
     <footer>
         <ul>
             <div class="social-content">
-                <li><a href="#"><img class="social" src="/assets/images/icons/instagram.png" alt="instagram"></a></li>
-                <li><a href="#"><img class="social" src="/assets/images/icons/github.png" alt="github"></a></li>
-                <li><a href="#"><img class="social" src="/assets/images/icons/linkedin.png" alt="linkedin"></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/prog.joao/"><img class="social" src="/assets/images/icons/instagram.png" alt="instagram"></a></li>
+                <li><a target="_blank" href="https://github.com/progjoao"><img class="social" src="/assets/images/icons/github.png" alt="github"></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/joaoricardobianchinivieira/#"><img class="social" src="/assets/images/icons/linkedin.png" alt="linkedin"></a></li>
+            </div>
+            <div class="copyright">
+                <p>Copyright (c) 2021 João Ricardo</p>
+                <p>All rights Reserved</p>
             </div>
             <div class="dados-navigation">
                 <li><a href="#produtos">chinelos</a></li>
@@ -81,7 +88,46 @@
                 <li><a href="#sobre">sobre nós</a></li>
             </div>
         </ul>
-    </footer> -->
+    </footer>
+
+
+
+
+
+
+
+    <div class="modal-hidden">
+        <div class="modal-info">
+            <img class="img-modal" src="" alt="">
+            <div class="dados-modal">
+                <h2 class="content-modal title-modal">Oakley e cor</h2>
+                <p class="content-modal description-modal">Descrição do chinelo</p>
+                <h4 class="content-modal size-modal">TAMANHO</h4>
+                <div class="sizes">
+                    <a href="" class="content-sizes"></a>
+                    <a href="" class="content-sizes"></a>
+                    <a href="" class="content-sizes"></a>
+                    <a href="" class="content-sizes"></a>
+                    <a href="" class="content-sizes"></a>
+                    <a href="" class="content-sizes selected"></a>
+                </div>
+                <div class="modal-price">
+                    <h3>Price</h3>
+                    <h4>125.00</h4>
+                </div>
+                <div class="end-modal">
+                    <a class="add-cart" href="">Adicionar ao carrinho</a>
+                    <a class="cancel" href="">Cancelar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+    
 
     <div class="cart">
         <div class="content-cart">
@@ -92,40 +138,44 @@
                 </div>
             </div>
             <hr>
+            <div class="details-cart">
+                <p>Detalhes do produto</p>
+                <p>Tamanho</p>
+                <p>quantidade</p>
+                <p>preço</p>
+                <p>total</p>
+            </div>
             <main class="main-cart">
                 <div class="details-product">
-                    <p>Detalhes do produto</p>
-                    <div>
-                        <img class="produto-teste" src="./assets/images/produtos/amarelo.png" alt="">
-                        <div class="">
-                            <p class="title-products"><span class="product-name"></span></p>
-                            <p class="product-color"><span class="product-name"></span></p>
-                            <p class="description-products"></p>
-                        </div>
+                    <img class="produto-teste" src="./assets/images/produtos/amarelo.png" alt="">
+                    <div class="">
+                        <p class="title-products"><span class="product-name"></span></p>
+                        <p class="product-color"><span class="product-name"></span></p>
+                        <p class="description-products"></p>
+                    </div>
+                </div>
+                <div class="size">
+                    <div class="small">
+                        <small class="size-item">--</small>
                     </div>
                 </div>
                 <div class="quantity">
-                    <p>quantidade</p>
                     <div class="select-quantity">
-                        <div c>
-                            <p>+</p>
-                        </div>
-                        <div>
-                            <input value="0" type="number" name="" id="">
-                        </div>
-                        <div>
-                            <p>-</p>
-                        </div>
+                        <p class="remove">-</p>
+                        <input class="input" value="0" type="tel" name="" id="">
+                        <p class="add">+</p>
                     </div>
                 </div>
                 <div class="price">
-                    <p>preço</p>
-                    <div>
-    
+                    <div class="small">
+                        <small class="price-item">--</small>
                     </div>
                 </div>
                 <div class="">
-                    <p>total</p>
+                    
+                    <div class="small">
+                        <small class="total-order">--</small>
+                    </div>
                 </div> 
             </main>
         </div>
